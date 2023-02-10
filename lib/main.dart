@@ -13,13 +13,25 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.orange,
         body: Stack(
           alignment: Alignment.bottomCenter,
-          children: const [
-            CustomBorder(),
-            SizedBox.expand(),
-            Buttons(),
+          children: [
+            const CustomBorder(),
+            const SizedBox.expand(),
+            Center(
+                child: Transform.rotate(
+              angle: -0.5,
+              child: const Text(
+                'Custom                  !',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            )),
+            const Buttons(),
           ],
         ),
       ),

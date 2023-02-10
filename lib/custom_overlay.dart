@@ -6,8 +6,8 @@ class CustomBorder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ColorFiltered(
-      colorFilter: ColorFilter.mode(
-        Colors.red.withOpacity(0.5),
+      colorFilter: const ColorFilter.mode(
+        Colors.purple,
         BlendMode.srcOut,
       ),
       child: Stack(
@@ -21,14 +21,19 @@ class CustomBorder extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.only(
-              top: 25,
-              bottom: 90,
-              left: 20,
-              right: 20,
+              top: 200,
+              bottom: 200,
+              left: 50,
+              right: 50,
             ),
             decoration: const BoxDecoration(
               color: Colors.black,
-              borderRadius: BorderRadius.all(Radius.circular(6)),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(0),
+                topRight: Radius.circular(50),
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(5),
+              ),
             ),
           ),
         ],
